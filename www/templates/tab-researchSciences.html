@@ -1,0 +1,16 @@
+<ion-view view-title="Research Sciences">
+  <ion-content class="padding">
+    <ion-list>
+      <ion-item class="item-icon-right" ng-repeat="researchSciencesTopic in researchSciencesTopics" type="item-text-wrap" href="#/tab/researchSciences/{{researchSciencesTopic.id}}">
+        <!--<img ng-src="{{researchSciencesTopic.face}}">-->
+        <h2>{{researchSciencesTopic.name}}</h2>
+        <p>{{researchSciencesTopic.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+<!--
+        <ion-option-button class="button-assertive" ng-click="remove(researchSciencesTopic)">
+          Delete
+        </ion-option-button>-->
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

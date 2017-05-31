@@ -1,0 +1,68 @@
+
+
+<ion-view title="Enter Expected Score in JEE Advanced:" id="page5">
+<ion-content style="background-size:cover; background-color: lightgreen"  padding="true"  class="has-header">
+    <form name="myForm1" novalidate style=" 
+	top: 60%;"		
+	>
+	
+		<div class="padding">			 
+		  <p > Enter Year of Exam </p>					  
+		</div>
+	
+		
+
+        <div class="list">		
+			<label class="item item-select" id="JEE-select1" name="dwdww" style=" border-radius:14px 14px 14px 14px !important " >
+				<span class="input-label">Year of Exam</span>
+				<select type="number" name="JeeYear" placeholder="" ng-model="data.jeeYear" ng-minlength="1" required >					  
+				  <option>2014</option>
+				  <option>2015</option>
+				  <option>2016</option>
+				  <option>2017</option>				  
+				</select>
+			</label>
+
+			 <div class="padding">			 
+				 <!--<p ng-show = "data.jeeYear === '2017'"> Awaited! Please Update the app via Google Play Store after 8:00 PM on 21 May, 2017</p>			  -->
+				 <p ng-show = "data.jeeYear === '2017'">  Enter Expected JEE Advanced Score out of 366</p>			  
+				  <p ng-show = "data.jeeYear === '2016'"> Enter Expected JEE Advanced Score out of 372</p>
+				  <p ng-show = "data.jeeYear === '2015'"> Enter Expected JEE Advanced Score out of 504</p>
+				  <p ng-show = "data.jeeYear === '2014'"> Enter Expected JEE Advanced Score out of 360</p>			  					
+			</div>
+			
+			<label class="item item-input " id="signup-input1" style =" border-radius:14px 14px 0px 0px !important" ng-show = "data.jeeYear === '2014' || data.jeeYear === '2015'||data.jeeYear === '2016' ||data.jeeYear === '2017'">        
+			  <span class="input-label">Expected JEE Score</span>
+			  <input type="number" name="JeeScore" placeholder="Score" ng-model="data.jeeScore"  ng-minlength="1" required>
+			  <!--<input type="text" placeholder="">-->
+			</label>
+		
+		
+			 <label class="item item-select" id="JEE-select1" name="dwdww" style=" border-radius:0px 0px 14px 14px !important " ng-show = "data.jeeYear === '2014' || data.jeeYear === '2015'||data.jeeYear === '2016'||data.jeeYear === '2017'">
+				<span class="input-label">Category</span>
+				<select type="number" name="Category" placeholder="" ng-model="data.category" ng-minlength="1" required >					  
+				  <option>General</option>
+				  <option>OBC</option>
+				  <option>SC</option>
+				  <option>ST</option>				  
+				</select>
+			</label>		
+		</div>	
+        <div class="padding">
+           <!-- <p ng-show="myForm1.name.$error.minlength">* Name is required</p>
+			<p ng-show="myForm1.mobileno.$error.minlength">* Mobile number must be at least 10 digits</p>
+            <p ng-show="myForm1.email.$invalid && !myForm1.email.$pristine">* Email must be a valid email address</p>
+             <p ng-show="myForm1.email.$error.minlength">* Email must be longer than 5 characters</p>     
+            <p ng-show="myForm1.city.$error.minlength">* City name is required</p> --> 
+			<p ng-show="myForm1.JeeYear.$error.minlength">* Enter only numbers</p>
+			<p ng-show="myForm1.JeeScore.$error.minlength">* Enter only numbers</p>
+			<p ng-show="myForm1.Category.$error.minlength">* Select Category</p>
+        </div>
+		
+        <div class="padding">
+            <button type="button" class="button button-block button-positive" ng-disabled="myForm1.$invalid" ng-click="predictRankBranch()">Predict Rank & Branch</button>
+        </div>
+		
+    </form>
+</ion-content>
+</ion-view>

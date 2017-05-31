@@ -1,0 +1,6 @@
+{
+  "name": "JEE Main & Advanced Compendium",
+  "app_id": "" ,
+"gulpStartupTasks": ["sass", "watch"]  
+}
+

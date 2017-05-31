@@ -1,0 +1,68 @@
+<ion-view title="Signup" id="page5">
+<ion-content style="background: url(img/Background.png) no-repeat center;background-size:cover;" class="has-header">
+    <form name="myForm" novalidate style="
+	<!--width: 290px;-->
+	 top: 60%;
+    -webkit-transform: translateY(-80%);
+    -moz-transform: translateY(-80%);
+    -ms-transform: translateY(-80%);
+    -o-transform: translateY(-80%);
+    transform: translateY(-80%);
+    position: absolute !important;
+    margin:0 auto;
+    width:100%;
+	
+	
+	
+			
+	
+	<!--
+	top: 50%;		
+	left: 50%;
+	transform: translate(-50%, -50%);	
+	position: absolute;
+	vertical-align: middle;
+	top: 300px;		
+		-->	
+	"	
+	>
+	
+        <div class="list">
+        <label class="item item-input" id="signup-input1" style =" border-radius:14px 14px 0px 0px !important">
+        <!--  <span class="input-label">Name</span>
+		  <input type="text" name="name" placeholder="" ng-model="data.name" ng-minlength="1" required>
+         
+        </label>
+		
+		 <label class="item item-input" id="signup-input2" > -->
+          <span class="input-label">Mobile No</span>
+		  <input type="tel" name="mobileno" placeholder="" ng-model="data.mobileno" ng-minlength="10" required>
+          <!--<input type="text" placeholder="">-->
+        </label>
+		
+		<label class="item item-input" id="signup-input3" style =" " >
+          <span class="input-label">Email</span>
+		  <input type="email" name="email" placeholder="Leave blank if you have no email" ng-model="data.email"  >
+        
+        </label>
+		
+		
+		 <label class="item item-input" id="signup-input4" style =" border-radius: 0px 0px 14px 14px !important">
+          <span class="input-label">City</span>
+		  <input type="text" name="city" placeholder="" ng-model="data.city" ng-minlength="1" required>
+          
+        </label>
+		
+        <div class="padding">
+           <!-- <p ng-show="myForm.name.$error.minlength">* Name is required</p>		-->
+			<p ng-show="myForm.mobileno.$error.minlength">* Mobile number must be at least 10 digits</p>
+            <!--<p ng-show="myForm.email.$invalid && !myForm.email.$pristine">* Email must be a valid email address</p>    -->           
+            
+			<p ng-show="myForm.city.$error.minlength">* City name is required</p> 
+        </div>
+        <div class="padding">
+            <button type="button" class="button button-block button-positive" ng-disabled="myForm.$invalid" ng-click="submit()">Submit</button>
+        </div>
+    </form>
+</ion-content>
+</ion-view>
